@@ -1,0 +1,48 @@
+{
+    "intents": [
+      {
+        "tag": "greeting",
+        "patterns": [
+          "Salut",
+          "Bonjour",
+          "Comment ça va",
+          "Y a-t-il quelqu'un ?",
+          "Bonjour",
+          "Bonne journée"
+        ],
+        "responses": [
+          "Salut :-)",
+          "Bonjour, merci de votre visite",
+          "Bonjour, que puis-je faire pour vous ?",
+          "Bonjour, comment puis-je vous aider ?"
+        ]
+      },
+      {
+        "tag": "goodbye",
+        "patterns": ["Au revoir", "À plus tard", "Bonne nuit"],
+        "responses": [
+          "À bientôt, merci de votre visite",
+          "Passez une bonne journée",
+          "Au revoir ! Revenez bientôt."
+        ]
+      },
+      {
+        "tag": "thanks",
+        "patterns": ["Merci", "Merci beaucoup", "C'est utile", "Merci beaucoup !"],
+        "responses": ["Heureux de pouvoir aider !", "À tout moment !", "Avec plaisir"]
+      },
+      {
+        "tag": "items",
+        "patterns": [
+          "Quels articles avez-vous ?",
+          "Quels types d'articles proposez-vous ?",
+          "Qu'est-ce que vous vendez ?"
+        ],
+        "responses": [
+          "Nous vendons du café et du thé",
+          "Nous avons du café et du thé"
+        ]
+    }
+  ]
+}
+      
