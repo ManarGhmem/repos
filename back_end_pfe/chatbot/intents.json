@@ -1,48 +1,38 @@
 {
-    "intents": [
-      {
-        "tag": "greeting",
-        "patterns": [
-          "Salut",
-          "Bonjour",
-          "Comment ça va",
-          "Y a-t-il quelqu'un ?",
-          "Bonjour",
-          "Bonne journée"
-        ],
-        "responses": [
-          "Salut :-)",
-          "Bonjour, merci de votre visite",
-          "Bonjour, que puis-je faire pour vous ?",
-          "Bonjour, comment puis-je vous aider ?"
-        ]
-      },
-      {
-        "tag": "goodbye",
-        "patterns": ["Au revoir", "À plus tard", "Bonne nuit"],
-        "responses": [
-          "À bientôt, merci de votre visite",
-          "Passez une bonne journée",
-          "Au revoir ! Revenez bientôt."
-        ]
-      },
-      {
-        "tag": "thanks",
-        "patterns": ["Merci", "Merci beaucoup", "C'est utile", "Merci beaucoup !"],
-        "responses": ["Heureux de pouvoir aider !", "À tout moment !", "Avec plaisir"]
-      },
-      {
-        "tag": "items",
-        "patterns": [
-          "Quels articles avez-vous ?",
-          "Quels types d'articles proposez-vous ?",
-          "Qu'est-ce que vous vendez ?"
-        ],
-        "responses": [
-          "Nous vendons du café et du thé",
-          "Nous avons du café et du thé"
-        ]
-    }
-  ]
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Salut",
+        "Bonjour",
+        "Comment ça va",
+        "Y a-t-il quelqu'un ?",
+        "Bonjour",
+        "Bonne journée"
+      ],
+      "responses": [
+        "Salut, merci de votre visite",
+        "Bonjour, merci de votre visite",
+        "Bonjour, que puis-je faire pour vous ?",
+        "Bonjour, comment puis-je vous aider ?"
+      ]
+    },
+  {
+    "tag": "erreur E002 ",
+    "patterns": [
+      "quels est le contexte de cette erreur  ?",
+      "CONTEXTE DE CETTE ERREUR   ?",
+      "c'est quoi le contexte de cette erreur?",
+      "erreur E002 ?",
+      "donné à analyser",
+      "quelles sont les données à analyser pour cette erreur "
+    ],
+    "responses": [
+      "Sur HELIOS, nous avons des cas en erreur E002 au niveau de la F15d, C15 associé au libellé « Erreur E002_Processus non assignable. Raison :» Ce sont des cas pour lesquels plusieurs raisons peuvent être la cause de cette erreur. Pour ce modop on va se focaliser sur l’erreur E002. Dans la majorité des cas, on trouve une dissociation d’un process d’ACT, MC ou bien SE. D’autres ou l’intégration du C15 d’un processus n’a pas pu aboutir à l’intégration.Pour ces cas-là le traitement va consister à faire une analyse complète sur la situation contractuelle du client afin de comprendre l’origine du rejet de l’erreur."
+
+    ]
 }
-      
+
+]
+}
+    

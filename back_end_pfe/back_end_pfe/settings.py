@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'cours',
     'project_total',
-    'chatbot'
+    'chatbot',
+    'users'
 ]
 # django rest framework allow any from postman
 REST_FRAMEWORK = {
@@ -140,6 +141,7 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+AUTH_USER_MODEL = 'users.User'
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_CREDENTIALS = True
 
@@ -147,3 +149,12 @@ CORS_ORIGIN_WHITELIST = [
     'http://localhost:4200',  # Add your Angular app's domain
     # Add more origins if needed
 ]
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587  # Or the appropriate port for your SMTP server
+EMAIL_USE_TLS = True  # Enable TLS for secure communication
+EMAIL_USE_SSL = False
+EMAIL_HOST_USER = 'ghmemmanar05@gmail.com'
+EMAIL_HOST_PASSWORD = 'jlfgjgsppucdmvho'
