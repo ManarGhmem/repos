@@ -75,10 +75,8 @@
 
 import random
 import json
-
 import torch
-
-from chatbot.model import NeuralNet
+from chatbot.model import Transformer
 from chatbot.nltk_utils import bag_of_words, tokenize
 import os
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -103,7 +101,7 @@ all_words = data['all_words']
 tags = data['tags']
 model_state = data["model_state"]
 
-model = NeuralNet(input_size, hidden_size, output_size).to(device)
+model = Transformer(input_size, hidden_size, output_size).to(device)
 model.load_state_dict(model_state)
 model.eval()
 

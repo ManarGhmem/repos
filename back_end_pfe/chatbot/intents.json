@@ -17,6 +17,22 @@
         "Bonjour, comment puis-je vous aider ?"
       ]
     },
+    {
+      "tag": "goodbye",
+      "patterns": ["Au revoir", "À plus tard", "Bonne nuit"],
+      "responses": [
+        "À bientôt, merci de votre visite",
+        "Passez une bonne journée",
+        "Au revoir ! Revenez bientôt."
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Merci", "Merci beaucoup", "C'est utile", "Merci beaucoup !"],
+      "responses": ["Heureux de pouvoir aider !", "À tout moment !", "Avec plaisir"]
+    },
+    
+  
   {
     "tag": "erreur E002 ",
     "patterns": [
@@ -31,7 +47,141 @@
       "Sur HELIOS, nous avons des cas en erreur E002 au niveau de la F15d, C15 associé au libellé « Erreur E002_Processus non assignable. Raison :» Ce sont des cas pour lesquels plusieurs raisons peuvent être la cause de cette erreur. Pour ce modop on va se focaliser sur l’erreur E002. Dans la majorité des cas, on trouve une dissociation d’un process d’ACT, MC ou bien SE. D’autres ou l’intégration du C15 d’un processus n’a pas pu aboutir à l’intégration.Pour ces cas-là le traitement va consister à faire une analyse complète sur la situation contractuelle du client afin de comprendre l’origine du rejet de l’erreur."
 
     ]
+},
+{
+"tag": "Solution erreur E002 F15d dissocié de l’activation : ",
+"patterns": [
+  "quels est la solution pour l'erreur E002 F15d dissocié de l’activation : ?",
+  "Solution de l'erreur F15d dissocié de l’activation :?",
+  "c'est quoi la soltion ?",
+  "solution E002 F15d dissocié de l’activation :",
+  "solution",
+  "F15d dissocié de l’activation :"
+
+],
+"responses": [
+ "Aller dans l’appli Hélios avec le n° de PDL faites Go et déployer la frise temporelle, apres Dans « Message », rechercher la relève en erreur.  On a donc une erreur E002 au niveau de la F15d de la date mentionnée,vous devez Cliquer sur la ligne de l’erreur pour que les détails de la F15d s’affichent à côté.Dans le détail, on a, en bas de page, le libellé du code erreur E002 intitulé « Processus non assignable » On récupère l’ID AFFAIRE « A08FUITL » de la f15d pour savoir le process dont il appartient. Vous allez alors retourner voir la frise temporelle et checker les IDs affaires, On remarque donc que l’ID affaire de la F15d est le même que celui de l’activation « A08FUITL».Le traitement va consister à envoyer le cas au service rejet activation. Remarque : toutes erreur liés à l'Activation doit etre affécté au sérvice Activation."
+
+
+]
+},
+{
+"tag": "Solution erreur E002 F15d en erreur 002 détaché d’un processus : ",
+"patterns": [
+  "quels est la solution pour l'erreur F15d en erreur 002 détaché d’un processus  : ?",
+  "Solution de l'erreur F15d en erreur 002 détaché d’un processus :?",
+  "c'est quoi la soltion ?",
+  "solution E002 F15d dissocié de l’activation :",
+  "solution",
+  "F15d dissocié de l’activation :"
+
+],
+"responses": [
+ "Aller dans Hélios et reporter le n° de PDL  pour afficher la frise temporelle, et cliquer dans « Détails » pour voir apparaitre en bas de page l’erreur E002 sur le frais F15d. Cliquez sur la ligne concernée par l’erreur E002, pour avoir les détails du flux, ainsi que le libellé de l’erreur E002 qui indique le processus non assignable. Vous allez analyser 2 éléments de base qui vont nous indiquer l’affaire concernée : date d’effet et ID Affaire. A travers la date d’effet vous allez cerner l’événement concerné et le confirmer avec l’id affaire. Le traitement dans ce cas s’agit de demander à les associer avec ce commentaire type :‘Merci d’associer le flux F15d en erreur E002 avec l’id-affaire ‘.....’ avec la S/E à la date de '.....’.Le Traitement préconisé et l’affectation sont à l’équipe DSI : il s’agit de créer un ticket pour faire le traitement adéquat"
+
+
+]
+},
+{
+"tag": "Solution erreur Cas d’erreur E002 : Processus non assignable. Raison : Impossible de reconnaitre la classe temporelle : HN » un flux de C15.: ",
+"patterns": [
+  "quels est la solution pour  E002 : Processus non assignable. Raison : Impossible de reconnaitre la classe temporelle : HN » un flux de C15  : ?",
+  "Solution de l'erreur  E002 : Processus non assignable. Raison : Impossible de reconnaitre la classe temporelle : HN » un flux de C15 :?",
+  "c'est quoi la solution ?",
+  "solution E002  E002 : Processus non assignable. Raison : Impossible de reconnaitre la classe temporelle : HN » un flux de C15 :",
+  "solution",
+  " E002 : Processus non assignable. Raison : Impossible de reconnaitre la classe temporelle : HN » un flux de C15 :"
+
+],
+"responses": [
+ "Aller dans Hélios et reporter le PDL pour afficher la Frise temporelle , Aller dans « Détail », rechercher l’erreur E002 en bas de page, et cliquer sur la ligne de l’erreur pour que s’affiche le détail du flux C15 en erreur. D’après le code erreur E002 : Processus non assignable. Raison : Impossible de reconnaitre la classe temporelle : HN », on peut bien constater que le code erreur indique une incohérence au niveau des calendriers Fournisseurs/Distributeur. C’est-à-dire que les calendriers portés par le flux de C15 ne sont pas celles attendues par Hélios. Aussi, pour ce cas-là, on peut remarquer que les flux qui arrivent après l’activation sont neutralisés, et le cas reste toujours actif sur SAP. Pour ce type d’erreur, Merci de voir le mode opératoire du code erreur E081 : » Erreur E081_Le code calendrier fournisseur # n'est pas géré dans l'application Hélios », qui donne plus de détails sur le contexte de cette erreur. "
+
+]
+},
+{
+"tag": "Solution erreur Cas d’erreur TEMPO- Exclusion : ",
+"patterns": [
+  "quels est la solution pour  E002 : Processus non assignable. Raison : Impossible de reconnaitre la classe temporelle : HN » un flux de C15  : ?",
+  "Solution de l'erreur  E002 : Processus non assignable. Raison : Impossible de reconnaitre la classe temporelle : HN » un flux de C15 :?",
+  "c'est quoi la soltion ?",
+  "solution E002  E002 : Processus non assignable. Raison : Impossible de reconnaitre la classe temporelle : HN » un flux de C15 :",
+  "solution",
+  " E002 : Processus non assignable. Raison : Impossible de reconnaitre la classe temporelle : HN » un flux de C15 :"
+
+],
+"responses": [
+ "Pour ce cas, on remarque qu’au niveau de l’activation, on a au niveau de la C15 un évènement CFNE, un message « fin tempo- activation à partir MC Et aussi on a un MDPRM en erreur E002.Dans ce cas, le traitement consiste à laisser ce cas à côte, on ne peut pas le traiter. ».  "
+
+]
+},
+{
+"tag": "Solution erreur Cas : F15d en erreur E002 sans date d’effet : Composante de relevé résiduel Annul :",
+"patterns": [
+  "quels est la solution pour  E002 : F15d en erreur E002 sans date d’effet : Composante de relevé résiduel Annul : ?",
+  "Solution de l'erreur  E002 : F15d en erreur E002 sans date d’effet : Composante de relevé résiduel Annul :?",
+  "c'est quoi la soltion ?",
+  "solution E002  F15d en erreur E002 sans date d’effet : Composante de relevé résiduel Annul :",
+  "solution",
+  " E002 : F15d en erreur E002 sans date d’effet : Composante de relevé résiduel Annul :"
+
+],
+"responses": [
+ "Pour l’erreur, il s’agit d’un F15d en erreur E002, ayant comme libellé Composante de relevé résiduel – Annul. Comme traitement, on va faire la comparaison avec un autre F15d ayant le même libellé. On cherche dans les F15ds intégrés la Composante de relevé résiduel – Annul avec la même date, le même montant et le même code que celui en erreur.C’est bien celui-ci, donc on ouvre l’XML, et on fait la comparaison.En faisant la comparaison, on remarque l’absence au niveau de le f15d en erreur ces lignes dans l’XML qui concerne l’ID relève. NB : il faut vérifier bien évidemment le nombre des composantes dans le F15d intégrer et celles dans lf15d d’annulation, ils doivent être égales. Et aussi on vérifie la transmission de ce frais sur SAP. On fait du copier-coller de ces lignes, et on les ajoute dans celui qui est en erreur : Et on ajoute ces lignes : </Groupe_valeurise> <Releves> <Id_Releve>..............</Id_Releve> </Releve> puis relencez, vérifiez sur SAP(VA03) si le frais est transmis, on récupère le numéro de valorisation du frais"
+
+]
+},
+{
+"tag": "Solution erreur cas en erreur E001 au niveau de la C15 associé au libellé « Le message « » n’est pas dans un format valide :",
+"patterns": [
+"quels est la solution pour cas en erreur E001 au niveau de la C15 associé au libellé « Le message « » n’est pas dans un format valide : ?",
+"Solution de l'erreur cas en erreur E001 au niveau de la C15 associé au libellé « Le message « » n’est pas dans un format valide ",
+"c'est quoi la soltion ?",
+"cas en erreur E001 au niveau de la C15 associé au libellé « Le message « » n’est pas dans un format valide :» ",
+"solution",
+" cas en erreur E001 au niveau de la C15 associé au libellé « Le message « » n’est pas dans un format valide :» "
+
+],
+"responses": [
+"Contexte de projet : Sur HELIOS, nous avons des cas en erreur E001 au niveau de la C15 associé au libellé « Le message « » n’est pas dans un format valide :» ce sont des cas ou au niveau des opérations, il manque celle de dépose ou bien la pose, Les données à analyser est de focaliser sur l’erreur E001 « Le message n’est pas dans un format valide. » on va vérifier sur HELIOS, plus précisément au niveau la situation contractuelle du client et la C15 en erreur et on fait la comparaison s’il y a des modifications. si le cas est PSC c'est à dire point sans comptage  On va sur Hélios tout en ouvrant le PDL, on remarque tout à d’abord qu’il s’agit d’un Point sans comptage. On ouvre le C15 en erreur On va sur Hélios tout en ouvrant le PDL, on remarque tout à d’abord qu’il s’agit d’un Point sans comptage.On ouvre le C15 en erreur Pour ce type de cas, on ne peut jamais le traiter, on remonte ce cas à l’équipe DSI tout en faisant un ticket."
+
+
+]
+},
+{
+"tag": "Solution erreur cas en ed’erreurs de type E081 : « Le code calendrier fournisseur # n'est pas géré dans l'application Hélios »",
+"patterns": [
+  "quels est la solution pour cas en erreur d’erreurs de type E081 : « Le code calendrier fournisseur # n'est pas géré dans l'application Hélios » ?",
+  "Solution de l'erreur cas en erreur d’erreurs de type E081 : « Le code calendrier fournisseur # n'est pas géré dans l'application Hélios »",
+  "c'est quoi la soltion ?",
+  "cas en erreur d’erreurs de type E081 : « Le code calendrier fournisseur # n'est pas géré dans l'application Hélios »",
+  "solution",
+  " cas en d’erreurs de type E081 : « Le code calendrier fournisseur # n'est pas géré dans l'application Hélios »"
+
+],
+"responses": [
+ "Contexte de projet : Sur HELIOS, nous avons des messages d’erreurs de type E081 : « Le code calendrier fournisseur # n'est pas géré dans l'application Hélios » ; Ces messages concernent principalement des flux C15 et également des flux R15, et signalent la présence d’une incohérence au niveau du calendrier. Le flux tombe en erreur car il ne porte par le calendrier attendu. Donnée à analyser : Dans Hélios, il s’agit de voir tout d’abord les données du flux en erreur E081 avec le calendrier associé puis d’aller vérifier dans SGE qui a fait la demande / S’il s’agit d’un agent total ou non. La résolution est :  Cas d’erreur 081 sur un flux C15 : Aller dans Hélios et reporter le n° de PDL pour afficher la frise temporelle. Aller dans « Détail », rechercher l’erreur E081 en bas de page, et cliquer sur la ligne de l’erreur pour que s’affiche le détail du flux C15 à côté. Dans le détail, on a, en bas de page, le libellé du code erreur avec indiqué le calendrier que porte le flux, et qui n’est pas celui attendu par Hélios,    « Le code calendrier fournisseur FC021170 n'est pas géré dans l'application Hélios » Le traitement va consister à aller vérifier dans SGE qui a fait la demande. S’il s’agit d’un agent total ou externe, vérifier le calendrier attendu sur Hélios. Noté bien que les principaux cas remontés concernent des modifications de calendrier issues de PDL en « base » ou en « HP-HC » et qui sont donc associés aux calendriers Fournisseur suivants :Pour 1 PDL en « Base », le calendrier correspondant est FC000063 Pour 1 PDL en « HP-HC » le calendrier correspondant est FC000064. Mettez le PDL sur SGE puis verifier dans l'historique d'affaires. Avant ca, vous devez vérifier dans Hélios pour voire la date de la MC: Modification contractuelle. apres la vérification de la date On revient dans SGE pour voir s’il y’a eu une affaire à cette date. revenz sur SGE, et vérifier s'il y a une réclamation à cette date. Cliquez sur son identifiant et voire les informations de la demande puis vérifier si son demandeur et interne total energie. Deux cas se présentent : Si le demandeur est interne dans Total Energie : ça veut dire  qu’on doit envoyer le cas au service client tout en mettant dans un commentaire ‘’ Le calendrier fournisseur FC021170 n'est pas géré dans l'application Helios ’’ et en mentionnant si le client est part ou grand compte.Si le demandeur n’est pas interne dans Total Energie : On fera ainsi une réclamation dans SPICE. NB : Tout les agents @webhelp sont des agents total Energie. Dans ce cas-là  : On doit juste envoyer le cas au service client en mettant dans un commentaire ‘’ Le calendrier fournisseur FC021170 n'est pas géré dans l'application Helios ’’ tout en mentionnant si le client est part ou grand compte."
+ 
+
+]
+},
+{
+"tag": "Solution erreur cas en ’erreurs Installation  déjà entrée dans le calcul de facturation pour date, Code: AH",
+"patterns": [
+  "quels est la solution pour cas en erreur Installation  déjà entrée dans le calcul de facturation pour date, Code: AH",
+  "Solution de l'erreur Installation  déjà entrée dans le calcul de facturation pour date, Code: AH",
+  "c'est quoi la soltion ?",
+  "cas en erreur d’Installation  déjà entrée dans le calcul de facturation pour date, Code: AH",
+  "solution",
+  " cas en d’erreurs de type Installation  déjà entrée dans le calcul de facturation pour date, Code: AH»",
+  "Installation  déjà entrée dans le calcul de facturation pour date, Code: AH"
+
+],
+"responses": [
+ "Contexte de projet : Sur HELIOS, nous avons un message d’erreur de transmission d’une modification contractuel MC intitulé « TR_ACK_SAP_KO : Installation 8110436 déjà entrée dans le calcul de facturation pour 30.12, Code : AH»"
+
+]
 }
+
 
 ]
 }
